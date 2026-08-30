@@ -1,0 +1,32 @@
+# Dataset
+*.zip
+data/
+UCSD_Anomaly_Dataset/
+
+# Model outputs
+outputs/
+checkpoints/
+models/
+*.pt
+*.pth
+*.ckpt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+.env
+*.env
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
