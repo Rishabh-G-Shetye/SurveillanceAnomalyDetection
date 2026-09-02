@@ -161,7 +161,7 @@ The repository includes a standalone inference engine (`src/inference.py`) that 
 
 ## Visual Demonstrations & Output Videos
 
-This repository provides pre-rendered anomaly detection videos and synchronized multi-panel breakdowns in `outputs/videos/`, illustrating how our models localize abnormal activity and trigger real-time alerts.
+This repository provides pre-rendered anomaly detection videos and synchronized multi-panel breakdowns in `outputs/videos/`, illustrating how our models localize abnormal activity and trigger real-time alerts. All demonstrations below loop continuously:
 
 ### 1. Synchronized 4-Panel Breakdown (UCSD Ped2 - FramePredictionNet)
 Fine-grained spatial anomaly localization on UCSD Ped2 sequence `Test004` (featuring an unauthorized cyclist / cart on a pedestrian walkway):
@@ -170,39 +170,33 @@ Fine-grained spatial anomaly localization on UCSD Ped2 sequence `Test004` (featu
 |:---:|:---:|:---:|:---:|
 | Original surveillance feed | Canonical pixel-level GT mask | Spatial prediction error ($MSE$) | Detection bounding box & alert badge |
 
-![4-Panel Breakdown Ped2 Test004](outputs/figures/anomaly_detection_grid_Test004_FramePrediction.png)
+![Animated 4-Panel Breakdown Ped2 Test004](outputs/videos/detection_breakdown_Test004_FramePrediction.gif)
 
-#### Synchronized Video Breakdown (MP4):
-<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/detection_breakdown_Test004_FramePrediction.mp4" width="100%" controls></video>
-
-> 🔗 *Direct Video Link:* [▶️ Download / View 4-Panel Breakdown Video (Ped2 Test004 MP4)](outputs/videos/detection_breakdown_Test004_FramePrediction.mp4)
+> 🔗 *Direct Links:* [Download / Play High-Res MP4 Video](outputs/videos/detection_breakdown_Test004_FramePrediction.mp4) \| [Static High-Res Grid PNG](outputs/figures/anomaly_detection_grid_Test004_FramePrediction.png)
 
 ---
 
-### 2. Synchronized 4-Panel Breakdown (UCSD Ped1 - ConvAE Baseline)
-Detection breakdown under severe downward perspective distortion on UCSD Ped1 sequence `Test003`:
-
-![4-Panel Breakdown Ped1 Test003](outputs/figures/anomaly_detection_grid_Test003_ConvAE.png)
-
-#### Synchronized Video Breakdown (MP4):
-<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/detection_breakdown_Test003_ConvAE.mp4" width="100%" controls></video>
-
-> 🔗 *Direct Video Link:* [▶️ Download / View 4-Panel Breakdown Video (Ped1 Test003 MP4)](outputs/videos/detection_breakdown_Test003_ConvAE.mp4)
-
----
-
-### 3. Real-Time Surveillance Alert Video Overlays
+### 2. Real-Time Surveillance Alert Video Overlays (Continuous Live Playback)
 Live surveillance videos annotated with dynamic green `NORMAL` to flashing red `ANOMALY ALERT!` status badges and real-time score gauge meters:
 
-#### Sample Alert Video (UCSD Ped2 Test004 - ConvAE):
-<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/sample_alert_Test004_ConvAE_ped2.mp4" width="100%" controls></video>
+#### Ped2 Lateral Perspective (Sequence Test004 - Cyclist Detection):
+![Live Alert Overlay Ped2](outputs/videos/sample_alert_Test004_ConvAE_ped2.gif)
 
-> 🔗 *Direct Video Link:* [▶️ Download / View Alert Video (Ped2 Test004 MP4)](outputs/videos/sample_alert_Test004_ConvAE_ped2.mp4)
+> 🔗 *Direct Video Link:* [Download / Play Full MP4 Video (Ped2 Test004)](outputs/videos/sample_alert_Test004_ConvAE_ped2.mp4)
 
-#### Sample Alert Video (UCSD Ped1 Test003 - ConvAE):
-<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/sample_alert_Test003_ConvAE_ped1.mp4" width="100%" controls></video>
+#### Ped1 Downward Angle (Sequence Test003 - Perspective Skew):
+![Live Alert Overlay Ped1](outputs/videos/sample_alert_Test003_ConvAE_ped1.gif)
 
-> 🔗 *Direct Video Link:* [▶️ Download / View Alert Video (Ped1 Test003 MP4)](outputs/videos/sample_alert_Test003_ConvAE_ped1.mp4)
+> 🔗 *Direct Video Link:* [Download / Play Full MP4 Video (Ped1 Test003)](outputs/videos/sample_alert_Test003_ConvAE_ped1.mp4)
+
+---
+
+### 3. Synchronized 4-Panel Breakdown (UCSD Ped1 - ConvAE Baseline)
+Detection breakdown under severe downward perspective distortion on UCSD Ped1 sequence `Test003`:
+
+![Animated 4-Panel Breakdown Ped1 Test003](outputs/videos/detection_breakdown_Test003_ConvAE.gif)
+
+> 🔗 *Direct Links:* [Download / Play High-Res MP4 Video](outputs/videos/detection_breakdown_Test003_ConvAE.mp4) \| [Static High-Res Grid PNG](outputs/figures/anomaly_detection_grid_Test003_ConvAE.png)
 
 ---
 
