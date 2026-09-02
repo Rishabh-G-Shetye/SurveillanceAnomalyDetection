@@ -4,12 +4,12 @@
   "total_frames": 200,
   "threshold": 0.5,
   "max_score": 1.0,
-  "mean_score": 0.41981342193609633,
+  "mean_score": 0.438527187978744,
   "detected_events": [
     {
-      "start_frame": 121,
+      "start_frame": 114,
       "max_score": 1.0,
-      "peak_frame": 200,
+      "peak_frame": 192,
       "end_frame": 200
     }
   ]
