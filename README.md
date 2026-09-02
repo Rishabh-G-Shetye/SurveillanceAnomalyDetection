@@ -321,7 +321,7 @@ Each phase of the project is implemented as an interactive, fully commented Jupy
 ## Video Demonstration
 
 A 3–5 minute video demonstration walking through the methodology, code walkthrough, and live real-time anomaly detection inference:
-- **YouTube Link (Unlisted)**: `[Video Demonstration URL placeholder]`
+- **YouTube Link (Unlisted)**: [https://www.youtube.com/watch?v=PFw0H0Jvzec](https://www.youtube.com/watch?v=PFw0H0Jvzec)
 - Demonstrates:
   - Architecture walkthrough (Spatial, Recurrent, Transformer, Predictive, Memory).
   - Live execution of `src/inference.py` on test surveillance footage.
