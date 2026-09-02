@@ -1,0 +1,17 @@
+{
+  "frame_auc_roc": 0.7276651632950318,
+  "frame_eer": 0.3361506677300239,
+  "frame_precision": 0.6735238095238095,
+  "frame_recall": 0.8741656365883808,
+  "frame_f1": 0.7608391608391608,
+  "frame_threshold_used": 0.17440088514444338,
+  "event_precision_avg": 0.42407407407407405,
+  "event_recall_avg": 0.9305555555555556,
+  "event_f1_avg": 0.5376984126984128,
+  "total_evaluated_frames": 7196,
+  "total_anomalous_frames": 4045,
+  "total_evaluated_sequences": 36,
+  "ms_per_clip": 3.503332000109367,
+  "ms_per_frame": 0.4379165000136709,
+  "fps": 2283.5403552247562
+}

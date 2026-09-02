@@ -1,0 +1,16 @@
+{
+  "input_source": "data/raw/UCSD_Anomaly_Dataset/UCSDped1/Test/Test003",
+  "model": "ConvAE",
+  "total_frames": 200,
+  "threshold": 0.5,
+  "max_score": 1.0,
+  "mean_score": 0.41981342193609633,
+  "detected_events": [
+    {
+      "start_frame": 121,
+      "max_score": 1.0,
+      "peak_frame": 200,
+      "end_frame": 200
+    }
+  ]
+}

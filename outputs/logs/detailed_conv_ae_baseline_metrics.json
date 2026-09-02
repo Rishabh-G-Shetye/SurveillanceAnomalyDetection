@@ -1,0 +1,12 @@
+{
+  "frame_auc_roc": 0.6032182265618797,
+  "frame_eer": 0.464414807758461,
+  "frame_precision": 0.654,
+  "frame_recall": 0.5295546558704454,
+  "frame_f1": 0.5852348993288591,
+  "frame_threshold_used": 0.023696311749517918,
+  "event_precision_avg": 0.47833333333333333,
+  "event_recall_avg": 0.9,
+  "ms_per_clip": 4.049524000147358,
+  "ms_per_frame": 0.5061905000184197
+}
