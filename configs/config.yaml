@@ -1,0 +1,28 @@
+# Surveillance Video Anomaly Detection - Configuration
+# UCSD Pedestrian Anomaly Dataset
+
+dataset:
+  # Path to the extracted UCSD dataset (relative to project root)
+  data_root: "data/raw/UCSD_Anomaly_Dataset"
+  metadata_csv: "data/metadata.csv"
+  dataset_name: "Ped1"        # "Ped1" or "Ped2"
+
+preprocessing:
+  target_size: [128, 128]
+  window_length: 8
+  stride: 4
+  mean: 0.5
+  std: 0.5
+
+training:
+  batch_size: 32
+  num_epochs: 15
+  learning_rate: 0.001
+  patience: 5
+  num_workers: 0              # 0 for Windows compatibility
+
+output:
+  checkpoints_dir: "models"
+  results_dir: "outputs/logs"
+  figures_dir: "outputs/figures"
+  videos_dir: "outputs/videos"
