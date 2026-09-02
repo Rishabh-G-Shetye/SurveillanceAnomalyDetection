@@ -17,6 +17,7 @@ Deep learning-based unsupervised and semi-supervised video anomaly detection in 
 - [Data Pipeline & Canonical Ground Truth](#data-pipeline--canonical-ground-truth)
 - [Evaluation Protocol](#evaluation-protocol)
 - [Real-Time Anomaly Alert System](#real-time-anomaly-alert-system)
+- [Visual Demonstrations & Output Videos](#visual-demonstrations--output-videos)
 - [Environment & Installation](#environment--installation)
 - [Usage Instructions](#usage-instructions)
   - [Smoke Test](#1-verify-setup-smoke-test)
@@ -156,11 +157,54 @@ The repository includes a standalone inference engine (`src/inference.py`) that 
   - Dynamic **Status Banner**: `NORMAL` (green) vs `ANOMALY ALERT!` (red).
   - Real-time **Score Gauge** & progress bar indicating likelihood of abnormality.
   - **Spatial Heatmap Overlay**: Highlights the exact image region where reconstruction/prediction error is localized (Explainability stretch goal).
-- Generates a **score timeline plot** (`.png`) and a **structured event log** (`.json`) with timestamps, peak anomaly frames, and confidence scores.
+---
+
+## Visual Demonstrations & Output Videos
+
+This repository provides pre-rendered anomaly detection videos and synchronized multi-panel breakdowns in `outputs/videos/`, illustrating how our models localize abnormal activity and trigger real-time alerts.
+
+### 1. Synchronized 4-Panel Breakdown (UCSD Ped2 - FramePredictionNet)
+Fine-grained spatial anomaly localization on UCSD Ped2 sequence `Test004` (featuring an unauthorized cyclist / cart on a pedestrian walkway):
+
+| Panel 1: Raw CCTV Video | Panel 2: Ground Truth Mask | Panel 3: Continuous Error Heatmap | Panel 4: Bounding Box & Alert Overlay |
+|:---:|:---:|:---:|:---:|
+| Original surveillance feed | Canonical pixel-level GT mask | Spatial prediction error ($MSE$) | Detection bounding box & alert badge |
+
+![4-Panel Breakdown Ped2 Test004](outputs/figures/anomaly_detection_grid_Test004_FramePrediction.png)
+
+#### Synchronized Video Breakdown (MP4):
+<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/detection_breakdown_Test004_FramePrediction.mp4" width="100%" controls></video>
+
+> 🔗 *Direct Video Link:* [▶️ Download / View 4-Panel Breakdown Video (Ped2 Test004 MP4)](outputs/videos/detection_breakdown_Test004_FramePrediction.mp4)
 
 ---
 
-## Environment & Installation
+### 2. Synchronized 4-Panel Breakdown (UCSD Ped1 - ConvAE Baseline)
+Detection breakdown under severe downward perspective distortion on UCSD Ped1 sequence `Test003`:
+
+![4-Panel Breakdown Ped1 Test003](outputs/figures/anomaly_detection_grid_Test003_ConvAE.png)
+
+#### Synchronized Video Breakdown (MP4):
+<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/detection_breakdown_Test003_ConvAE.mp4" width="100%" controls></video>
+
+> 🔗 *Direct Video Link:* [▶️ Download / View 4-Panel Breakdown Video (Ped1 Test003 MP4)](outputs/videos/detection_breakdown_Test003_ConvAE.mp4)
+
+---
+
+### 3. Real-Time Surveillance Alert Video Overlays
+Live surveillance videos annotated with dynamic green `NORMAL` to flashing red `ANOMALY ALERT!` status badges and real-time score gauge meters:
+
+#### Sample Alert Video (UCSD Ped2 Test004 - ConvAE):
+<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/sample_alert_Test004_ConvAE_ped2.mp4" width="100%" controls></video>
+
+> 🔗 *Direct Video Link:* [▶️ Download / View Alert Video (Ped2 Test004 MP4)](outputs/videos/sample_alert_Test004_ConvAE_ped2.mp4)
+
+#### Sample Alert Video (UCSD Ped1 Test003 - ConvAE):
+<video src="https://github.com/Rishabh-G-Shetye/SurveillanceAnomalyDetection/raw/main/outputs/videos/sample_alert_Test003_ConvAE_ped1.mp4" width="100%" controls></video>
+
+> 🔗 *Direct Video Link:* [▶️ Download / View Alert Video (Ped1 Test003 MP4)](outputs/videos/sample_alert_Test003_ConvAE_ped1.mp4)
+
+---
 
 ### Prerequisites
 - Python 3.10+ (tested on Python 3.13)
