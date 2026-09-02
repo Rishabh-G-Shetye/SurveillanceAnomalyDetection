@@ -1,32 +1,33 @@
-# Dataset
-*.zip
-data/
-UCSD_Anomaly_Dataset/
-
-# Model outputs
-outputs/
-checkpoints/
-models/
-*.pt
-*.pth
-*.ckpt
-
 # Python
 __pycache__/
 *.py[cod]
+*.pyd
+
+# Virtual Envronment
 .venv/
-venv/
-env/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Secrets
-.env
-*.env
+# Data
+data/raw/
+data/processed/
 
-# IDE / OS
+# Model checkpoints (tracking trained .pt baselines; ignore temp formats)
+models/*.pth
+models/*.onnx
+
+# Outputs (track figures, logs, and sample videos; ignore large raw arrays)
+outputs/logs/*.npz
+!outputs/figures/
+!outputs/logs/*.json
+!outputs/videos/
+
+# IDE
 .idea/
-.vscode/
-.DS_Store
-Thumbs.db
+
+# Python cache
+.pytest_cache/
+
+# Environment
+.env
